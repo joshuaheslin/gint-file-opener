@@ -15,8 +15,6 @@ const run = async () => {
     }
   });
 
-  
-
   console.log('Stopped');
 };
 
