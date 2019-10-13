@@ -6,6 +6,7 @@ const testFolder = './';
 
 const run = async () => {
   console.log('Running...');
+  console.log('Running Test LOL...');
 
   fs.readdir(testFolder, async (err, files) => {
     if (err) {
@@ -23,7 +24,7 @@ const run = async () => {
           await open(testFolder + file, { wait: true });
           console.log('Done')
         } else {
-          console.log(`Skipping: ${file}. Wrong file type found. Only supports '.gsc'`)
+          console.log(`Skipping: ${file}. Wrong file type found. This script only supports '.gsc'`)
         }
       }
     } catch (err) {
@@ -33,6 +34,7 @@ const run = async () => {
       input: process.stdin,
       output: process.stdout
     })
+
     rl.question('Select enter to close the window.', (answer) => {
       rl.close();
     })
@@ -40,4 +42,3 @@ const run = async () => {
 };
 
 run();
-
